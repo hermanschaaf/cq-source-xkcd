@@ -20,7 +20,7 @@ func (c *Client) ID() string {
 	return "xkcd"
 }
 
-func New(ctx context.Context, logger zerolog.Logger, s specs.Source, _ ...source.Option) (schema.ClientMeta, error) {
+func New(_ context.Context, logger zerolog.Logger, s specs.Source, _ source.Options) (schema.ClientMeta, error) {
 	var pluginSpec Spec
 
 	if err := s.UnmarshalSpec(&pluginSpec); err != nil {
