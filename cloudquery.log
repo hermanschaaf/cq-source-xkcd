@@ -1,0 +1,108 @@
+2023-02-15T16:06:43Z INF Loading spec(s) args=["config.yaml"] module=cli
+2023-02-15T16:06:43Z ERR exiting with error error="failed to load spec(s) from config.yaml. Error: failed to unmarshal file config.yaml: failed to decode spec: json: unknown field \"destination\"" module=cli
+2023-02-15T16:06:55Z INF Loading spec(s) args=["config.yaml"] module=cli
+2023-02-15T16:06:56Z INF Source plugin server listening address=/var/folders/_c/hm9lkvfj7fz_rykn71rmr8gh0000gn/T/cq-yqinANqksskkwDjX.sock module=cli
+2023-02-15T16:06:57Z INF started call grpc.code=OK grpc.component=server grpc.method=GetProtocolVersion grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:06:57Z grpc.time_ms=0.045 module=cli peer.address= protocol=grpc
+2023-02-15T16:06:57Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetProtocolVersion grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:06:57Z grpc.time_ms=0.098 module=cli peer.address= protocol=grpc
+2023-02-15T16:06:57Z INF Start sync destinations=["sqlite (v1.2.3)"] module=cli source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)" sync_time=2023-02-15T16:06:57Z
+2023-02-15T16:07:00Z INF Destination plugin server listening address=/var/folders/_c/hm9lkvfj7fz_rykn71rmr8gh0000gn/T/cq-ErqbvtBXhiRPBDEI.sock module=cli
+2023-02-15T16:07:01Z INF started call grpc.code=OK grpc.component=server grpc.method=Configure grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=0.136 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF finished call grpc.code=OK grpc.component=server grpc.method=Configure grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=1.12 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF started call grpc.code=OK grpc.component=server grpc.method=GetTablesForSpec grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=0.034 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetTablesForSpec grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=0.473 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF started call grpc.code=OK grpc.component=server grpc.method=GetTables grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=0.015 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetTables grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=0.033 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF Start migration destinations=["sqlite (v1.2.3)"] module=cli source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)"
+2023-02-15T16:07:01Z INF started call grpc.code=OK grpc.component=server grpc.method=Migrate grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=0.019 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF finished call grpc.code=OK grpc.component=server grpc.method=Migrate grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=4.115 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF End migration destinations=["sqlite (v1.2.3)"] module=cli num_tables=1 source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)" time_took=0.004717333
+2023-02-15T16:07:01Z INF Start fetching resources destinations=["sqlite (v1.2.3)"] module=cli source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)"
+2023-02-15T16:07:01Z INF started call grpc.code=OK grpc.component=server grpc.method=Sync2 grpc.method_type=server_stream grpc.service=proto.Source grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=0.029 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF top level table resolver started client=xkcd module=xkcd-src table=xkcd_comics
+2023-02-15T16:07:01Z INF started call grpc.code=OK grpc.component=server grpc.method=Write2 grpc.method_type=client_stream grpc.service=proto.Destination grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=0.256 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z ERR table resolver finished with error error="parse \"https://xkcd.com/\\x01/info.0.json\": net/url: invalid control character in URL" client=xkcd module=xkcd-src table=xkcd_comics
+2023-02-15T16:07:01Z INF table sync finished client=xkcd errors=1 module=xkcd-src resources=1 table=xkcd_comics
+2023-02-15T16:07:01Z INF sync finished duration=101.71875 errors=1 module=xkcd-src panics=0 resources=1
+2023-02-15T16:07:01Z INF closing backend module=xkcd-src
+2023-02-15T16:07:01Z INF finished call grpc.code=OK grpc.component=server grpc.method=Sync2 grpc.method_type=server_stream grpc.service=proto.Source grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=103.225 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF finished call grpc.code=OK grpc.component=server grpc.method=Write2 grpc.method_type=client_stream grpc.service=proto.Destination grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=106.331 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF started call grpc.code=OK grpc.component=server grpc.method=Close grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=0.018 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF finished call grpc.code=OK grpc.component=server grpc.method=Close grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=0.108 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF started call grpc.code=OK grpc.component=server grpc.method=GetMetrics grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=0.02 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetMetrics grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:07:01Z grpc.time_ms=0.146 module=cli peer.address= protocol=grpc
+2023-02-15T16:07:01Z INF waiting for destination plugin to terminate module=cli
+2023-02-15T16:07:01Z INF Got stop signal. Destination plugin server shutting down address=/var/folders/_c/hm9lkvfj7fz_rykn71rmr8gh0000gn/T/cq-ErqbvtBXhiRPBDEI.sock module=cli signal=interrupt
+2023-02-15T16:07:01Z INF End sync destinations=["sqlite (v1.2.3)"] module=cli source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)" sync_time=2023-02-15T16:06:57Z
+2023-02-15T16:07:01Z INF Got interrupt. Source plugin server shutting down address=/var/folders/_c/hm9lkvfj7fz_rykn71rmr8gh0000gn/T/cq-yqinANqksskkwDjX.sock module=cli
+2023-02-15T16:08:14Z INF Loading spec(s) args=["config.yaml"] module=cli
+2023-02-15T16:08:15Z INF Source plugin server listening address=/var/folders/_c/hm9lkvfj7fz_rykn71rmr8gh0000gn/T/cq-CJYaZOIXifYdHyvU.sock module=cli
+2023-02-15T16:08:16Z INF started call grpc.code=OK grpc.component=server grpc.method=GetProtocolVersion grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:08:16Z grpc.time_ms=0.094 module=cli peer.address= protocol=grpc
+2023-02-15T16:08:16Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetProtocolVersion grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:08:16Z grpc.time_ms=0.14 module=cli peer.address= protocol=grpc
+2023-02-15T16:08:16Z INF Start sync destinations=["sqlite (v1.2.3)"] module=cli source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)" sync_time=2023-02-15T16:08:16Z
+2023-02-15T16:08:16Z INF Destination plugin server listening address=/var/folders/_c/hm9lkvfj7fz_rykn71rmr8gh0000gn/T/cq-fjeZIqjJQikqszLG.sock module=cli
+2023-02-15T16:08:17Z INF started call grpc.code=OK grpc.component=server grpc.method=Configure grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:08:17Z grpc.time_ms=0.063 module=cli peer.address= protocol=grpc
+2023-02-15T16:08:17Z INF finished call grpc.code=OK grpc.component=server grpc.method=Configure grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:08:17Z grpc.time_ms=1.332 module=cli peer.address= protocol=grpc
+2023-02-15T16:08:17Z INF Start migration destinations=["sqlite (v1.2.3)"] module=cli source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)"
+2023-02-15T16:08:17Z INF started call grpc.code=OK grpc.component=server grpc.method=GetTablesForSpec grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:08:17Z grpc.time_ms=0.011 module=cli peer.address= protocol=grpc
+2023-02-15T16:08:17Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetTablesForSpec grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:08:17Z grpc.time_ms=0.209 module=cli peer.address= protocol=grpc
+2023-02-15T16:08:17Z INF started call grpc.code=OK grpc.component=server grpc.method=GetTables grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:08:17Z grpc.time_ms=0.007 module=cli peer.address= protocol=grpc
+2023-02-15T16:08:17Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetTables grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:08:17Z grpc.time_ms=0.018 module=cli peer.address= protocol=grpc
+2023-02-15T16:08:17Z INF started call grpc.code=OK grpc.component=server grpc.method=Migrate grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:08:17Z grpc.time_ms=0.012 module=cli peer.address= protocol=grpc
+2023-02-15T16:08:17Z INF finished call grpc.code=OK grpc.component=server grpc.method=Migrate grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:08:17Z grpc.time_ms=9.318 module=cli peer.address= protocol=grpc
+2023-02-15T16:08:17Z INF End migration destinations=["sqlite (v1.2.3)"] module=cli num_tables=1 source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)" time_took=0.01051725
+2023-02-15T16:08:17Z INF Start fetching resources destinations=["sqlite (v1.2.3)"] module=cli source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)"
+2023-02-15T16:08:17Z INF started call grpc.code=OK grpc.component=server grpc.method=Sync2 grpc.method_type=server_stream grpc.service=proto.Source grpc.start_time=2023-02-15T16:08:17Z grpc.time_ms=0.051 module=cli peer.address= protocol=grpc
+2023-02-15T16:08:17Z INF top level table resolver started client=xkcd module=xkcd-src table=xkcd_comics
+2023-02-15T16:08:17Z INF started call grpc.code=OK grpc.component=server grpc.method=Write2 grpc.method_type=client_stream grpc.service=proto.Destination grpc.start_time=2023-02-15T16:08:17Z grpc.time_ms=0.295 module=cli peer.address= protocol=grpc
+2023-02-15T16:08:47Z INF Sync in progress module=xkcd-src total_errors=0 total_panics=0 total_resources=164
+2023-02-15T16:09:17Z INF Sync in progress module=xkcd-src total_errors=0 total_panics=0 total_resources=334
+2023-02-15T16:09:31Z ERR table resolver finished with error error="invalid character '<' looking for beginning of value" client=xkcd module=xkcd-src table=xkcd_comics
+2023-02-15T16:09:31Z INF table sync finished client=xkcd errors=1 module=xkcd-src resources=404 table=xkcd_comics
+2023-02-15T16:09:31Z INF sync finished duration=73611.188333 errors=1 module=xkcd-src panics=0 resources=404
+2023-02-15T16:09:31Z INF closing backend module=xkcd-src
+2023-02-15T16:09:31Z INF finished call grpc.code=OK grpc.component=server grpc.method=Sync2 grpc.method_type=server_stream grpc.service=proto.Source grpc.start_time=2023-02-15T16:08:17Z grpc.time_ms=73611.44 module=cli peer.address= protocol=grpc
+2023-02-15T16:09:31Z INF finished call grpc.code=OK grpc.component=server grpc.method=Write2 grpc.method_type=client_stream grpc.service=proto.Destination grpc.start_time=2023-02-15T16:08:17Z grpc.time_ms=73622.75 module=cli peer.address= protocol=grpc
+2023-02-15T16:09:31Z INF started call grpc.code=OK grpc.component=server grpc.method=Close grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:09:31Z grpc.time_ms=0.039 module=cli peer.address= protocol=grpc
+2023-02-15T16:09:31Z INF finished call grpc.code=OK grpc.component=server grpc.method=Close grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:09:31Z grpc.time_ms=0.508 module=cli peer.address= protocol=grpc
+2023-02-15T16:09:31Z INF started call grpc.code=OK grpc.component=server grpc.method=GetMetrics grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:09:31Z grpc.time_ms=0.052 module=cli peer.address= protocol=grpc
+2023-02-15T16:09:31Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetMetrics grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:09:31Z grpc.time_ms=0.202 module=cli peer.address= protocol=grpc
+2023-02-15T16:09:31Z INF waiting for destination plugin to terminate module=cli
+2023-02-15T16:09:31Z INF Got stop signal. Destination plugin server shutting down address=/var/folders/_c/hm9lkvfj7fz_rykn71rmr8gh0000gn/T/cq-fjeZIqjJQikqszLG.sock module=cli signal=interrupt
+2023-02-15T16:09:31Z INF End sync destinations=["sqlite (v1.2.3)"] module=cli source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)" sync_time=2023-02-15T16:08:16Z
+2023-02-15T16:09:31Z INF Got interrupt. Source plugin server shutting down address=/var/folders/_c/hm9lkvfj7fz_rykn71rmr8gh0000gn/T/cq-CJYaZOIXifYdHyvU.sock module=cli
+2023-02-15T16:12:39Z INF Loading spec(s) args=["config.yaml"] module=cli
+2023-02-15T16:12:40Z INF Source plugin server listening address=/var/folders/_c/hm9lkvfj7fz_rykn71rmr8gh0000gn/T/cq-CkogBqKagvlTwbxV.sock module=cli
+2023-02-15T16:12:41Z INF started call grpc.code=OK grpc.component=server grpc.method=GetProtocolVersion grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:12:41Z grpc.time_ms=0.073 module=cli peer.address= protocol=grpc
+2023-02-15T16:12:41Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetProtocolVersion grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:12:41Z grpc.time_ms=0.141 module=cli peer.address= protocol=grpc
+2023-02-15T16:12:41Z INF Start sync destinations=["sqlite (v1.2.3)"] module=cli source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)" sync_time=2023-02-15T16:12:41Z
+2023-02-15T16:12:41Z INF Destination plugin server listening address=/var/folders/_c/hm9lkvfj7fz_rykn71rmr8gh0000gn/T/cq-JKNKTjXWhyVTIbds.sock module=cli
+2023-02-15T16:12:42Z INF started call grpc.code=OK grpc.component=server grpc.method=Configure grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:12:42Z grpc.time_ms=0.096 module=cli peer.address= protocol=grpc
+2023-02-15T16:12:42Z INF finished call grpc.code=OK grpc.component=server grpc.method=Configure grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:12:42Z grpc.time_ms=1.4 module=cli peer.address= protocol=grpc
+2023-02-15T16:12:42Z INF started call grpc.code=OK grpc.component=server grpc.method=GetTablesForSpec grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:12:42Z grpc.time_ms=0.023 module=cli peer.address= protocol=grpc
+2023-02-15T16:12:42Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetTablesForSpec grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:12:42Z grpc.time_ms=0.386 module=cli peer.address= protocol=grpc
+2023-02-15T16:12:42Z INF started call grpc.code=OK grpc.component=server grpc.method=GetTables grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:12:42Z grpc.time_ms=0.016 module=cli peer.address= protocol=grpc
+2023-02-15T16:12:42Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetTables grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:12:42Z grpc.time_ms=0.052 module=cli peer.address= protocol=grpc
+2023-02-15T16:12:42Z INF Start migration destinations=["sqlite (v1.2.3)"] module=cli source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)"
+2023-02-15T16:12:42Z INF started call grpc.code=OK grpc.component=server grpc.method=Migrate grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:12:42Z grpc.time_ms=0.01 module=cli peer.address= protocol=grpc
+2023-02-15T16:12:42Z INF finished call grpc.code=OK grpc.component=server grpc.method=Migrate grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:12:42Z grpc.time_ms=7.429 module=cli peer.address= protocol=grpc
+2023-02-15T16:12:42Z INF End migration destinations=["sqlite (v1.2.3)"] module=cli num_tables=1 source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)" time_took=0.007876083
+2023-02-15T16:12:42Z INF Start fetching resources destinations=["sqlite (v1.2.3)"] module=cli source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)"
+2023-02-15T16:12:42Z INF started call grpc.code=OK grpc.component=server grpc.method=Sync2 grpc.method_type=server_stream grpc.service=proto.Source grpc.start_time=2023-02-15T16:12:42Z grpc.time_ms=0.035 module=cli peer.address= protocol=grpc
+2023-02-15T16:12:42Z INF top level table resolver started client=xkcd module=xkcd-src table=xkcd_comics
+2023-02-15T16:12:42Z INF started call grpc.code=OK grpc.component=server grpc.method=Write2 grpc.method_type=client_stream grpc.service=proto.Destination grpc.start_time=2023-02-15T16:12:42Z grpc.time_ms=1.203 module=cli peer.address= protocol=grpc
+2023-02-15T16:12:46Z ERR failed to fetch comic 404 error="invalid character '<' looking for beginning of value" module=xkcd-src
+2023-02-15T16:13:12Z INF Sync in progress module=xkcd-src total_errors=0 total_panics=0 total_resources=1921
+2023-02-15T16:13:25Z ERR table resolver finished with error error="invalid character '<' looking for beginning of value" client=xkcd module=xkcd-src table=xkcd_comics
+2023-02-15T16:13:25Z INF table sync finished client=xkcd errors=1 module=xkcd-src resources=2737 table=xkcd_comics
+2023-02-15T16:13:25Z INF sync finished duration=43041.452583 errors=1 module=xkcd-src panics=0 resources=2737
+2023-02-15T16:13:25Z INF closing backend module=xkcd-src
+2023-02-15T16:13:25Z INF finished call grpc.code=OK grpc.component=server grpc.method=Sync2 grpc.method_type=server_stream grpc.service=proto.Source grpc.start_time=2023-02-15T16:12:42Z grpc.time_ms=43041.69 module=cli peer.address= protocol=grpc
+2023-02-15T16:13:25Z INF finished call grpc.code=OK grpc.component=server grpc.method=Write2 grpc.method_type=client_stream grpc.service=proto.Destination grpc.start_time=2023-02-15T16:12:42Z grpc.time_ms=43051.72 module=cli peer.address= protocol=grpc
+2023-02-15T16:13:25Z INF started call grpc.code=OK grpc.component=server grpc.method=Close grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:13:25Z grpc.time_ms=0.02 module=cli peer.address= protocol=grpc
+2023-02-15T16:13:25Z INF finished call grpc.code=OK grpc.component=server grpc.method=Close grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-02-15T16:13:25Z grpc.time_ms=0.302 module=cli peer.address= protocol=grpc
+2023-02-15T16:13:25Z INF started call grpc.code=OK grpc.component=server grpc.method=GetMetrics grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:13:25Z grpc.time_ms=0.026 module=cli peer.address= protocol=grpc
+2023-02-15T16:13:25Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetMetrics grpc.method_type=unary grpc.service=proto.Source grpc.start_time=2023-02-15T16:13:25Z grpc.time_ms=0.201 module=cli peer.address= protocol=grpc
+2023-02-15T16:13:25Z INF waiting for destination plugin to terminate module=cli
+2023-02-15T16:13:25Z INF Got stop signal. Destination plugin server shutting down address=/var/folders/_c/hm9lkvfj7fz_rykn71rmr8gh0000gn/T/cq-JKNKTjXWhyVTIbds.sock module=cli signal=interrupt
+2023-02-15T16:13:25Z INF End sync destinations=["sqlite (v1.2.3)"] module=cli source="xkcd (local@/Users/hermanschaaf/code/writing-cq-plugins/cq-source-xkcd/cq-source-xkcd)" sync_time=2023-02-15T16:12:41Z
+2023-02-15T16:13:25Z INF Got interrupt. Source plugin server shutting down address=/var/folders/_c/hm9lkvfj7fz_rykn71rmr8gh0000gn/T/cq-CkogBqKagvlTwbxV.sock module=cli
