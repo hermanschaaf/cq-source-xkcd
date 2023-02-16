@@ -1,5 +1,7 @@
-cq-source-xkcd
-db.sql
-db
-.idea
 .cq
+.idea
+cloudquery.log
+cq-source-xkcd
+db
+db.sql
+dist
