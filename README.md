@@ -31,3 +31,9 @@ spec:
   spec:
     connection_string: ./db.sqlite
 ```
+
+Save the file as `config.yaml`, then run:
+
+```
+cloudquery sync config.yaml
+```
