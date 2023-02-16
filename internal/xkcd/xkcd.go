@@ -28,11 +28,29 @@ type Client struct {
 	client  *http.Client
 }
 
-func NewClient() (*Client, error) {
-	return &Client{
+type Option func(*Client)
+
+func WithBaseURL(uri string) Option {
+	return func(c *Client) {
+		c.baseURL = uri
+	}
+}
+
+func WithHTTPClient(client *http.Client) Option {
+	return func(c *Client) {
+		c.client = client
+	}
+}
+
+func NewClient(opts ...Option) (*Client, error) {
+	c := &Client{
 		baseURL: defaultURL,
 		client:  http.DefaultClient,
-	}, nil
+	}
+	for _, opt := range opts {
+		opt(c)
+	}
+	return c, nil
 }
 
 func (c *Client) GetComic(num int) (*Comic, error) {
