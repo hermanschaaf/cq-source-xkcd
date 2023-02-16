@@ -1,7 +1,7 @@
 # CloudQuery XKCD Source Plugin
 
-[![test](https://github.com/cloudquery/cq-source-xkcd/actions/workflows/test.yaml/badge.svg)](https://github.com/cloudquery/cq-source-xkcd/actions/workflows/test.yaml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/cloudquery/cq-source-xkcd)](https://goreportcard.com/report/github.com/cloudquery/cq-source-xkcd)
+[![test](https://github.com/hermanschaaf/cq-source-xkcd/actions/workflows/test.yaml/badge.svg)](https://github.com/hermanschaaf/cq-source-xkcd/actions/workflows/test.yaml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hermanschaaf/cq-source-xkcd)](https://goreportcard.com/report/github.com/hermanschaaf/cq-source-xkcd)
 
 This CloudQuery source plugin fetches data from the [XKCD API](https://xkcd.com/json.html), allowing you to load the XKCD comic data into any CloudQuery-supported destination (e.g. PostgreSQL, Elasticsearch, Snowflake, etc.). See [CloudQuery destinations](https://www.cloudquery.io/docs/plugins/destinations/overview) for a complete list of supported destinations.
 
