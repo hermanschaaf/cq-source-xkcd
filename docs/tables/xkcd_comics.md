@@ -16,7 +16,6 @@ The primary key for this table is **_cq_id**.
 |year|String|
 |news|String|
 |safe_title|String|
-|weather|String|
 |transcript|String|
 |alt|String|
 |img|String|

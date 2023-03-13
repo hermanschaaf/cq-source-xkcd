@@ -15,7 +15,6 @@ type Comic struct {
 	Year       string `json:"year"`
 	News       string `json:"news"`
 	SafeTitle  string `json:"safe_title"`
-	Weather    string `json:"Weather"`
 	Transcript string `json:"transcript"`
 	Alt        string `json:"alt"`
 	Img        string `json:"img"`
