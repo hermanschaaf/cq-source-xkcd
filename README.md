@@ -22,7 +22,7 @@ kind: source
 spec:
   name: xkcd
   path: hermanschaaf/xkcd
-  version: v1.0.0
+  version: v1.0.1
   destinations: ["sqlite"]
   spec:
 ---
