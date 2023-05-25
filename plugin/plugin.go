@@ -1,8 +1,8 @@
 package plugin
 
 import (
-	"github.com/cloudquery/plugin-sdk/plugins/source"
-	"github.com/cloudquery/plugin-sdk/schema"
+	"github.com/cloudquery/plugin-sdk/v3/plugins/source"
+	"github.com/cloudquery/plugin-sdk/v3/schema"
 	"github.com/hermanschaaf/cq-source-xkcd/client"
 	"github.com/hermanschaaf/cq-source-xkcd/resources"
 )

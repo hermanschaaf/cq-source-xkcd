@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/cloudquery/plugin-sdk/faker"
+	"github.com/cloudquery/plugin-sdk/v3/faker"
 	"github.com/hermanschaaf/cq-source-xkcd/client"
 	"github.com/hermanschaaf/cq-source-xkcd/internal/xkcd"
 )

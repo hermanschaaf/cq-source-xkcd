@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/cloudquery/plugin-sdk/serve"
+	"github.com/cloudquery/plugin-sdk/v3/serve"
 	"github.com/hermanschaaf/cq-source-xkcd/plugin"
 )
 
