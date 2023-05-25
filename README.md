@@ -22,15 +22,16 @@ kind: source
 spec:
   name: xkcd
   path: hermanschaaf/xkcd
-  version: v1.0.1
+  version: v2.0.0
   destinations: ["sqlite"]
+  tables: ["*"]
   spec:
 ---
 kind: destination
 spec:
   name: sqlite
   path: cloudquery/sqlite
-  version: v1.2.3
+  version: v2.2.0
   spec:
     connection_string: ./db.sqlite
 ```
