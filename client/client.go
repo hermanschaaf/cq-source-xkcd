@@ -1,39 +1,26 @@
 package client
 
 import (
-	"context"
-	"fmt"
-
-	"github.com/cloudquery/plugin-sdk/v3/plugins/source"
-	"github.com/cloudquery/plugin-sdk/v3/schema"
-	"github.com/cloudquery/plugin-pb-go/specs"
+	"github.com/cloudquery/plugin-sdk/v4/schema"
+	"github.com/cloudquery/plugin-sdk/v4/state"
 	"github.com/hermanschaaf/cq-source-xkcd/internal/xkcd"
 	"github.com/rs/zerolog"
 )
 
 type Client struct {
-	Logger zerolog.Logger
-	XKCD   *xkcd.Client
+	Logger  zerolog.Logger
+	XKCD    *xkcd.Client
+	Backend state.Client
 }
 
 func (c *Client) ID() string {
 	return "xkcd"
 }
 
-func New(_ context.Context, logger zerolog.Logger, s specs.Source, _ source.Options) (schema.ClientMeta, error) {
-	var pluginSpec Spec
-
-	if err := s.UnmarshalSpec(&pluginSpec); err != nil {
-		return nil, fmt.Errorf("failed to unmarshal plugin spec: %w", err)
-	}
-
-	c, err := xkcd.NewClient()
-	if err != nil {
-		return nil, err
-	}
-
+func New(logger zerolog.Logger, spec Spec, services *xkcd.Client, bk state.Client) schema.ClientMeta {
 	return &Client{
-		Logger: logger,
-		XKCD:   c,
-	}, nil
+		Logger:  logger,
+		XKCD:    services,
+		Backend: bk,
+	}
 }

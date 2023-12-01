@@ -1,4 +1,4 @@
-package resources
+package services
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/cloudquery/plugin-sdk/v3/faker"
+	"github.com/cloudquery/plugin-sdk/v4/faker"
 	"github.com/hermanschaaf/cq-source-xkcd/client"
 	"github.com/hermanschaaf/cq-source-xkcd/internal/xkcd"
 )
