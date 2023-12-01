@@ -28,6 +28,9 @@ func fetchComics(ctx context.Context, meta schema.ClientMeta, parent *schema.Res
 	g := errgroup.Group{}
 	g.SetLimit(10)
 	for i := 1; i < comic.Num; i++ {
+		if i == 404 {
+			continue
+		}
 		i := i
 		g.Go(func() error {
 			comic, err := c.XKCD.GetComic(i)
