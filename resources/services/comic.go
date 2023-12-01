@@ -1,10 +1,10 @@
-package resources
+package services
 
 import (
 	"context"
 
-	"github.com/cloudquery/plugin-sdk/v3/schema"
-	"github.com/cloudquery/plugin-sdk/v3/transformers"
+	"github.com/cloudquery/plugin-sdk/v4/schema"
+	"github.com/cloudquery/plugin-sdk/v4/transformers"
 	"github.com/hermanschaaf/cq-source-xkcd/client"
 	"github.com/hermanschaaf/cq-source-xkcd/internal/xkcd"
 	"golang.org/x/sync/errgroup"
