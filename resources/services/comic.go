@@ -14,7 +14,7 @@ func ComicsTable() *schema.Table {
 	return &schema.Table{
 		Name:      "xkcd_comics",
 		Resolver:  fetchComics,
-		Transform: transformers.TransformWithStruct(&xkcd.Comic{}),
+		Transform: transformers.TransformWithStruct(&xkcd.Comic{}, transformers.WithPrimaryKeys("Num")),
 	}
 }
 

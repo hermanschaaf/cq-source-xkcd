@@ -2,16 +2,16 @@
 
 This table shows data for XKCD Comics.
 
-The primary key for this table is **_cq_id**.
+The primary key for this table is **num**.
 
 ## Columns
 
 | Name          | Type          |
 | ------------- | ------------- |
-|_cq_id (PK)|`uuid`|
+|_cq_id|`uuid`|
 |_cq_parent_id|`uuid`|
 |month|`utf8`|
-|num|`int64`|
+|num (PK)|`int64`|
 |link|`utf8`|
 |year|`utf8`|
 |news|`utf8`|
